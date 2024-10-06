@@ -3,7 +3,11 @@ let computerScore = 0;
 let computerChoice = ""; 
 let humanChoice = "";
 
-getHumanChoice();
+// Calls the function 5 times
+for (i = 0; i < 5; i ++) {
+    getHumanChoice();
+}
+
 // Function to get User's Input
 function getHumanChoice() {
     let array = ["rock", "paper", "scissors"];
@@ -76,8 +80,9 @@ function playRound(humanChoice, computerChoice) {
     else if (humanChoice == "Scissors" && computerChoice == "Scissors") {
         console.log("Draw! Play Again.")
     }
-    console.log("Score: ");
-    console.log(`You: ${humanScore}`);
-    console.log(`Computer: ${computerScore}`);
-    getHumanChoice();
 }
+
+// Prints Score
+console.log("Score: ");
+console.log(`You: ${humanScore}`);
+console.log(`Computer: ${computerScore}`);
